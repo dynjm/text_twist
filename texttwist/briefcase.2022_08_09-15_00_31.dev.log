@@ -1,0 +1,177 @@
+Date/Time:       2022-08-09 15:00:31 
+Command line:    /Users/drrynjm/opt/anaconda3/bin/briefcase dev
+
+OS Release:      Darwin 21.3.0
+OS Version:      Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101
+Architecture:    x86_64
+Platform:        macOS-10.16-x86_64-i386-64bit
+
+Python exe:      /Users/drrynjm/opt/anaconda3/bin/python
+Python version:  3.9.12 (main, Apr  5 2022, 01:53:17)  [Clang 12.0.0 ]
+Virtual env:     False
+Conda env:       True
+
+Briefcase:       0.3.8
+Target platform: macOS
+Target format:   None
+
+Environment Variables:
+    CONDA_DEFAULT_ENV=base
+    CONDA_EXE=/Users/drrynjm/opt/anaconda3/bin/conda
+    CONDA_PREFIX=/Users/drrynjm/opt/anaconda3
+    CONDA_PROMPT_MODIFIER=(base) 
+    CONDA_PYTHON_EXE=/Users/drrynjm/opt/anaconda3/bin/python
+    CONDA_SHLVL=1
+    HOME=/Users/drrynjm
+    HOMEBREW_CELLAR=/opt/homebrew/Cellar
+    HOMEBREW_PREFIX=/opt/homebrew
+    HOMEBREW_REPOSITORY=/opt/homebrew
+    INFOPATH=/opt/homebrew/share/info:
+    LC_CTYPE=UTF-8
+    LOGNAME=drrynjm
+    MANPATH=/opt/homebrew/share/man::
+    OLDPWD=/Users/drrynjm/Personal_Projects/text_twist
+    PATH=/Users/drrynjm/opt/anaconda3/bin:/Users/drrynjm/opt/anaconda3/condabin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+    PWD=/Users/drrynjm/Personal_Projects/text_twist/texttwist
+    SHELL=/bin/zsh
+    SHLVL=1
+    SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.YnfP5wc7Po/Listeners
+    TERM=xterm-256color
+    TERM_PROGRAM=Apple_Terminal
+    TERM_PROGRAM_VERSION=443
+    TERM_SESSION_ID=6C9C2686-C2D4-43C2-9D4A-760838FF1E2B
+    TMPDIR=/var/folders/ww/xzmblx5526d50h6qrkfxgwrw0000gn/T/
+    USER=drrynjm
+    XPC_FLAGS=0x0
+    XPC_SERVICE_NAME=0
+    _=/Users/drrynjm/opt/anaconda3/bin/briefcase
+    _CE_CONDA=
+    _CE_M=
+    __CFBundleIdentifier=com.apple.Terminal
+    __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0
+
+Briefcase Log:
+[15:00:31]                                                                                                                                                                dev.py:147
+           [texttwist] Starting in dev mode...                                                                                                                            dev.py:147
+                                                                                                                                                                   subprocess.py:433
+           >>> Running Command:                                                                                                                                    subprocess.py:434
+           >>>     /Users/drrynjm/opt/anaconda3/bin/python -m texttwist                                                                                            subprocess.py:435
+           >>> Environment Overrides:                                                                                                                              subprocess.py:446
+           >>>     PYTHONPATH=src                                                                                                                                  subprocess.py:448
+           >>> Return code: 1                                                                                                                                      subprocess.py:464
+                                                                                                                                                                      __main__.py:21
+           Unable to start application 'texttwist'                                                                                                                    __main__.py:22
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/drrynjm/opt/anaconda3/lib/python3.9/site-packages/briefcase/commands/dev.py:88 in run_dev_app                                                                             │
+│                                                                                                                                                                                  │
+│    85 │   │   """                                                                             ╭───────────────────────────────── locals ──────────────────────────────────╮      │
+│    86 │   │   try:                                                                            │     app = <martirez.derrynjoi.personalproject.texttwist v0.0.1 AppConfig> │      │
+│    87 │   │   │   # Invoke the app.                                                           │     env = {'PYTHONPATH': 'src'}                                           │      │
+│ ❱  88 │   │   │   self.subprocess.run(                                                        │ options = {}                                                              │      │
+│    89 │   │   │   │   [sys.executable, "-m", app.module_name],                                │    self = <briefcase.commands.dev.DevCommand object at 0x7fb409493040>    │      │
+│    90 │   │   │   │   env=env,                                                                ╰───────────────────────────────────────────────────────────────────────────╯      │
+│    91 │   │   │   │   check=True,                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ /Users/drrynjm/opt/anaconda3/lib/python3.9/site-packages/briefcase/integrations/subprocess.py:223 in run                                                                         │
+│                                                                                                                                                                                  │
+│   220 │   │   self._log_environment(kwargs.get("env"))                                                                                                                           │
+│   221 │   │                                                                                                                                                                      │
+│   222 │   │   try:                                                                                                                                                               │
+│ ❱ 223 │   │   │   command_result = self._subprocess.run(                                                                                                                         │
+│   224 │   │   │   │   [str(arg) for arg in args], **self.final_kwargs(**kwargs)                                                                                                  │
+│   225 │   │   │   )                                                                                                                                                              │
+│   226 │   │   except subprocess.CalledProcessError as e:                                                                                                                         │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────── locals ────────────────────────────────────────────╮                                                                               │
+│ │                 args = ['/Users/drrynjm/opt/anaconda3/bin/python', '-m', 'texttwist']          │                                                                               │
+│ │ is_output_redirected = None                                                                    │                                                                               │
+│ │               kwargs = {'env': {'PYTHONPATH': 'src'}, 'check': True}                           │                                                                               │
+│ │                 self = <briefcase.integrations.subprocess.Subprocess object at 0x7fb3f823c4f0> │                                                                               │
+│ │        stream_output = False                                                                   │                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                               │
+│                                                                                                                                                                                  │
+│ /Users/drrynjm/opt/anaconda3/lib/python3.9/subprocess.py:528 in run                                                                                                              │
+│                                                                                                                                                                                  │
+│    525 │   │   │   raise                                                                                                                                                         │
+│    526 │   │   retcode = process.poll()                                                                                                                                          │
+│    527 │   │   if check and retcode:                                                                                                                                             │
+│ ❱  528 │   │   │   raise CalledProcessError(retcode, process.args,                                                                                                               │
+│    529 │   │   │   │   │   │   │   │   │    output=stdout, stderr=stderr)                                                                                                        │
+│    530 │   return CompletedProcess(process.args, retcode, stdout, stderr)                                                                                                        │
+│    531                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────── locals ──────────────────────────────────────────────╮                                                                            │
+│ │ capture_output = False                                                                            │                                                                            │
+│ │          check = True                                                                             │                                                                            │
+│ │          input = None                                                                             │                                                                            │
+│ │         kwargs = {                                                                                │                                                                            │
+│ │                  │   'env': {                                                                     │                                                                            │
+│ │                  │   │   'TMPDIR': '/var/folders/ww/xzmblx5526d50h6qrkfxgwrw0000gn/T/',           │                                                                            │
+│ │                  │   │   '__CFBundleIdentifier': 'com.apple.Terminal',                            │                                                                            │
+│ │                  │   │   'XPC_FLAGS': '0x0',                                                      │                                                                            │
+│ │                  │   │   'TERM': 'xterm-256color',                                                │                                                                            │
+│ │                  │   │   'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.YnfP5wc7Po/Listeners',  │                                                                            │
+│ │                  │   │   'XPC_SERVICE_NAME': '0',                                                 │                                                                            │
+│ │                  │   │   'TERM_PROGRAM': 'Apple_Terminal',                                        │                                                                            │
+│ │                  │   │   'TERM_PROGRAM_VERSION': '443',                                           │                                                                            │
+│ │                  │   │   'TERM_SESSION_ID': '6C9C2686-C2D4-43C2-9D4A-760838FF1E2B',               │                                                                            │
+│ │                  │   │   'SHELL': '/bin/zsh',                                                     │                                                                            │
+│ │                  │   │   ... +24                                                                  │                                                                            │
+│ │                  │   },                                                                           │                                                                            │
+│ │                  │   'text': True,                                                                │                                                                            │
+│ │                  │   'encoding': 'UTF-8'                                                          │                                                                            │
+│ │                  }                                                                                │                                                                            │
+│ │      popenargs = (['/Users/drrynjm/opt/anaconda3/bin/python', '-m', 'texttwist'],)                │                                                                            │
+│ │        process = <Popen: returncode: 1 args: ['/Users/drrynjm/opt/anaconda3/bin/python', '-m'...> │                                                                            │
+│ │        retcode = 1                                                                                │                                                                            │
+│ │         stderr = None                                                                             │                                                                            │
+│ │         stdout = None                                                                             │                                                                            │
+│ │        timeout = None                                                                             │                                                                            │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+CalledProcessError: Command '['/Users/drrynjm/opt/anaconda3/bin/python', '-m', 'texttwist']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/drrynjm/opt/anaconda3/lib/python3.9/site-packages/briefcase/__main__.py:14 in main                                                                                        │
+│                                                                                                                                                                                  │
+│   11 │   try:                                                                                ╭────────────────────────────────── locals ──────────────────────────────────╮      │
+│   12 │   │   command, options = parse_cmdline(sys.argv[1:])                                  │ command = <briefcase.commands.dev.DevCommand object at 0x7fb409493040>     │      │
+│   13 │   │   command.parse_config("pyproject.toml")                                          │       e = BriefcaseCommandError("Unable to start application 'texttwist'") │      │
+│ ❱ 14 │   │   command(**options)                                                              │     log = <briefcase.console.Log object at 0x7fb3f80eb880>                 │      │
+│   15 │   │   result = 0                                                                      │ options = {'appname': None, 'update_dependencies': False, 'run_app': True} │      │
+│   16 │   except HelpText as e:                                                               │  result = 200                                                              │      │
+│   17 │   │   log.info()                                                                      ╰────────────────────────────────────────────────────────────────────────────╯      │
+│                                                                                                                                                                                  │
+│ /Users/drrynjm/opt/anaconda3/lib/python3.9/site-packages/briefcase/commands/dev.py:149 in __call__                                                                               │
+│                                                                                                                                                                                  │
+│   146 │   │   if run_app:                                                                                                                                                        │
+│   147 │   │   │   self.logger.info("Starting in dev mode...", prefix=app.app_name)                                                                                               │
+│   148 │   │   │   env = self.get_environment(app)                                                                                                                                │
+│ ❱ 149 │   │   │   return self.run_dev_app(app, env, **options)                                                                                                                   │
+│   150                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────╮                                                             │
+│ │                 app = <martirez.derrynjoi.personalproject.texttwist v0.0.1 AppConfig>                            │                                                             │
+│ │             appname = None                                                                                       │                                                             │
+│ │      dist_info_path = PosixPath('/Users/drrynjm/Personal_Projects/text_twist/texttwist/src/texttwist.dist-info') │                                                             │
+│ │                 env = {'PYTHONPATH': 'src'}                                                                      │                                                             │
+│ │             options = {}                                                                                         │                                                             │
+│ │             run_app = True                                                                                       │                                                             │
+│ │                self = <briefcase.commands.dev.DevCommand object at 0x7fb409493040>                               │                                                             │
+│ │ update_dependencies = False                                                                                      │                                                             │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                             │
+│                                                                                                                                                                                  │
+│ /Users/drrynjm/opt/anaconda3/lib/python3.9/site-packages/briefcase/commands/dev.py:94 in run_dev_app                                                                             │
+│                                                                                                                                                                                  │
+│    91 │   │   │   │   check=True,                                                             ╭───────────────────────────────── locals ──────────────────────────────────╮      │
+│    92 │   │   │   )                                                                           │     app = <martirez.derrynjoi.personalproject.texttwist v0.0.1 AppConfig> │      │
+│    93 │   │   except subprocess.CalledProcessError as e:                                      │     env = {'PYTHONPATH': 'src'}                                           │      │
+│ ❱  94 │   │   │   raise BriefcaseCommandError(                                                │ options = {}                                                              │      │
+│    95 │   │   │   │   f"Unable to start application '{app.app_name}'"                         │    self = <briefcase.commands.dev.DevCommand object at 0x7fb409493040>    │      │
+│    96 │   │   │   ) from e                                                                    ╰───────────────────────────────────────────────────────────────────────────╯      │
+│    97                                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: Unable to start application 'texttwist'
